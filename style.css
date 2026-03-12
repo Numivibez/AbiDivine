@@ -1,4 +1,17 @@
-*{
+/* CSS Variables for consistency */
+:root {
+  --primary-blue: #0077cc;
+  --accent-gold: rgb(247, 191, 118);
+  --dark-bg: #1e282e;
+  --light-bg: #f3f4f6;
+  --text-dark: #222;
+  --text-light: rgba(34, 34, 34, 0.8);
+  --shadow-sm: 0 4px 8px rgba(0,0,0,0.15);
+  --shadow-md: 0 8px 20px rgba(0,0,0,0.2);
+  --transition: all 0.3s ease;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
