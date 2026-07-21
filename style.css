@@ -363,12 +363,12 @@ footer{
   text-decoration: none;
 }
 
- .footer-bottom {
-    text-align: center;
-    margin-top: 35px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
 .footer-bottom p{
   /* text-align: center; */
