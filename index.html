@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="./Images/AbiDivine Logo.png">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,14 +16,23 @@
             <div class="logo"> 
                 <a href="#home"><img src="./Images/AbiDivine Logo.png" width="80" height="80" alt="AbiDivine Oil & Gas Logo" loading="lazy"></a>
             </div>
-            <div>
+            <div id="navbar" class="navbar-div">
                 <ul class="navbar">
                     <li class="nav-item"><a href="#home">Home</a></li>
                     <li class="nav-item"><a href="#about-section">About</a></li>
                     <li class="nav-item"><a href="#service-section">Services</a></li>
                     <li class="nav-item"><a href="#contact-us">Contact</a></li>
                 </ul>
+
             </div>
+            <!-- HAMBURGER BUTTON - simple 3-line icon made with HTML/CSS -->
+            <button id="hamburger" class="hamburger" type="button" aria-label="Toggle navigation">
+                <div class="hamburger-lines">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+            </button>
         </nav>
     </header>
     

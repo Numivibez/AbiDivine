@@ -43,6 +43,7 @@ nav{
   /* padding-top: 10px 0; */
   padding: 6px 0;
   font: 1em sans-serif;
+  position: relative;
 }
 
 nav .logo img {
@@ -77,9 +78,45 @@ nav .logo img {
   transition: color 0.3s ease-in-out;
 }
 
-/* .navbar a:active{
-color: red;
-} */
+/* ===== HAMBURGER BUTTON STYLES ===== */
+/* The button is hidden on desktop, shown on mobile */
+.hamburger{
+  display: none;              /* Hidden on desktop */
+  background: transparent;    /* No background */
+  border: none;               /* No border */
+  cursor: pointer;            /* Shows pointer on hover */
+  padding: 5px;               /* Small padding around lines */
+}
+
+/* The container for the 3 lines */
+.hamburger-lines {
+  display: flex;
+  flex-direction: column;     /* Stack lines vertically */
+  gap: 5px;                   /* Space between each line */
+}
+
+/* Each individual line in the hamburger */
+.hamburger-lines .line {
+  display: block;
+  width: 28px;                /* Width of each line */
+  height: 3px;                /* Thickness of each line */
+  background-color: #000;     /* Black color */
+  border-radius: 3px;         /* Rounded edges */
+  transition: all 0.3s ease;  /* Smooth animation when changing */
+}
+
+/* When hamburger is clicked (has "active" class), turn the lines into an X */
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;  /* Hide the middle line */
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
 
 .banner{
   position: relative;
@@ -385,14 +422,16 @@ footer{
 /* mobile view */
 /* Mobile Responsive Styles */
 @media (max-width: 768px) {
-  *{
+  
+  /* Fix horizontal scrolling on mobile */
+  body {
     overflow-x: hidden;
-    max-width: 100%;
+    width: 100%;
   }
   
   /* Center navigation */
   nav {
-    flex-direction: column;
+    /* flex-direction: column; */
     text-align: center;
     gap: 15px;
   }
@@ -414,6 +453,44 @@ footer{
     padding: 8px 0;
   }
   
+  .navbar-div{
+    display: none;
+  }
+
+  .navbar-div.open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    width: 100%;
+    background: #d9e3ef;
+    padding: 15px 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    z-index: 20;
+  }
+
+  .navbar-div.open .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar-div.open .navbar li {
+    padding: 0;
+    width: 100%;
+  }
+
+  .navbar-div.open .navbar a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+  }
+
+.hamburger{
+    display: block;
+  }
+
   /* Center banner content */
   .banner {
     min-height: 300px;
